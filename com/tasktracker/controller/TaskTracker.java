@@ -4,13 +4,16 @@ import com.tasktracker.service.TaskService;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class TaskTracker {
+public class TaskTracker 
+{
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException
+    {
 
-        while (true) {
+        while (true) 
+        {
             System.out.println("\n=== TASK TRACKER ===");
             System.out.println("1. Add Task");
             System.out.println("2. View Tasks");
@@ -22,7 +25,8 @@ public class TaskTracker {
             int choice = sc.nextInt();
             sc.nextLine();
 
-            switch (choice) {
+            switch (choice) 
+            {
                 case 1 -> TaskService.addTask(sc);
                 case 2 -> TaskService.viewTasks();
                 case 3 -> TaskService.markDone(sc);
